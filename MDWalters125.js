@@ -9,7 +9,7 @@ window.handlePost = function(bundle) {
         bundle = bundle[1].split(": ");
     }
 
-    if (bundle[1].startsWith("@MDWalters125")) {
+	 if (bundle[1].startsWith("@MDWalters125")) {
         post("MY PREFIX IS ~ NOW GO USE THAT");
     }
 
@@ -40,5 +40,12 @@ window.handlePost = function(bundle) {
     if (bundle[1].startsWith("~8ball")) {
     	var num = Math.floor(Math.random() * eightBall.length);
     	post(eightBall[num]);
+    }
+    
+    if (bundle[1].startsWith("~solve")) {
+    	var x = parseInt(bundle[1].split(" ")[1]);
+    	var y = parseInt(bundle[1].split(" ")[2]);
+        post(x + y);
+        post(`!arcade give 10 ${bundle[0]}`);
     }
 }

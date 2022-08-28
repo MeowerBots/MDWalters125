@@ -41,11 +41,4 @@ window.handlePost = function(bundle) {
     	var num = Math.floor(Math.random() * eightBall.length);
     	post(eightBall[num]);
     }
-    
-    if (bundle[1].startsWith("~solve")) {
-    	var x = parseInt(bundle[1].split(" ")[1]);
-    	var y = parseInt(bundle[1].split(" ")[2]);
-        post(x + y);
-        post(`!arcade give 10 ${bundle[0]}`);
-    }
 }
